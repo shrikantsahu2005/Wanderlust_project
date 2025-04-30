@@ -16,7 +16,10 @@ const passportLocalMongoose=require("passport-local-mongoose")
 const listingcontroller=require("../controller/listings.js")
 
 
+router.get("/",(req,res)=>{
+  res.render("index.ejs")
 
+})
 
 router.get("/new",isLoggedIn,listingcontroller.newlsiting)
 //post route for the saving data and adding in main page
