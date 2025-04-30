@@ -1,0 +1,111 @@
+<% layout("/layouts/boilplate") %>
+<body>
+    <br>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h3>Create a New Listing</h3>
+    <br>
+    <form action="/listing" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label"><b> Title</b></label>
+                <input type="text" placeholder="Enter catcy Title" name="list[title]" class="form-control" required>
+           <div class="valid-feedback">
+            look good
+           </div>
+           <div class="invalid-feedback">
+            Please enter your <b>Title</b>
+           </div>
+
+
+        </div>
+
+<div class="mb-3">
+    <label for="description" class="form-label"><b> Description</b></label>
+        <textarea type="text"  name="list[description]" class="form-control"required></textarea>
+        <div class="valid-feedback">
+            look good
+           </div>
+           <div class="invalid-feedback">
+            Please enter <b>Description</b>
+           </div>
+    
+
+</div>
+
+<div class="row">
+    <div class="mb-3 col-md-4" >
+        <label for="price" class="form-label"><b> Price</b></label>
+            <input name="list[price]" type="text" placeholder="1500" class="form-control" required>
+    
+            <div class="valid-feedback">
+                look good
+               </div>
+               <div class="invalid-feedback">
+                Please enter your <b>Price</b>
+               </div>
+    
+    </div>
+          <!-- <div class="mb-3 col-md-8">
+        <label for="url" class="form-label"><b> URL </b></label>
+            <input type="text" placeholder="URL/Link" name="list[url]" class="form-control">
+        
+            <div class="valid-feedback">
+                look good
+               </div>
+               <div class="invalid-feedback">
+                Please enter your <b>URL</b>
+               </div>
+         </div> -->
+
+         <div class="mb-3 col-md-8">
+            <label for="url" class="form-label"><b> Image </b></label>
+                <input type="file"  name="list[url]" class="form-control">
+            
+                <div class="valid-feedback">
+                    look good
+                   </div>
+                   <div class="invalid-feedback">
+                    Please upload your <b>file</b>
+                   </div>
+             </div>
+
+</div>
+
+        
+        <div class="mb-3">
+            <label for="location" class="form-label"><b>Location </b></label>
+                <input   name="list[location]" type="text"  placeholder="Nagpur,Pulgaon" class="form-control"required>
+                <div class="valid-feedback">
+                    look good
+                   </div>
+                   <div class="invalid-feedback">
+                    Please enter your <b>Location</b>
+                   </div>
+            
+        </div>
+       
+        
+
+        <div class="mb-3">
+            <label for="country" class="form-label"><b>  Country </b></label>
+                <input type="text" name="list[country]" placeholder="India" class="form-control" required>
+                <div class="valid-feedback">
+                    look good
+                   </div>
+                   <div class="invalid-feedback">
+                    Please enter your <b>Country</b>
+                   </div>
+
+          
+        </div>
+        
+        
+       
+ <button class=" mb-3 btn btn-dark  btn-add">Add</button>
+ <br><br>
+
+        
+    </form>
+</div>
+</div>
+</body>
