@@ -5,10 +5,11 @@ const mapToken=process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
 //index callback
-module.exports.index=async(req,res)=>{
-    let allistings=await listing.find({})
-     res.render("./listings/index.ejs",{allistings})
- }
+// Index Route - Show all listings
+module.exports.index = async (req, res) => {
+    let allistings = await listing.find({});
+    res.render("listings/index.ejs", { allistings });
+};
 
  // new get route
  module.exports.newlsiting=async(req,res)=>{

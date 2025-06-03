@@ -29,6 +29,7 @@ const usersrouter = require("./routes/user.js");
 const { error } = require("console");
 
 // Set up EJS and middleware
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.engine("ejs", ejsMate);
@@ -84,7 +85,11 @@ app.use((req, res, next) => {
     res.locals.currentUser = req.user;
     next();
 });
-
+//currentuser
+// app.use((req, res, next) => {
+//   res.locals.currentUser = req.user || null;
+//   next();
+// });
 // Routes
 app.use("/listing", listingrouter);
 app.use("/listing/:id/review", reviewrouter);
@@ -99,6 +104,7 @@ app.get("/", (req, res) => {
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page not found"));
 });
+
 
 app.use((err, req, res, next) => {
     const { statusCode = 520 } = err;
