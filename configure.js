@@ -11,7 +11,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
-      folder: 'WanderLust-dev',
+      folder: 'Airbnb_dev',
       allowerdFormats: ["png","jpg","jpeg"], // supports promises as well
       
     },
